@@ -13,6 +13,7 @@ public class SingleNumber {
 
         int[] nums = {1, 2, 4, 2, 1};
         System.out.println(findSingleNum(nums));  // 4
+        System.out.println(findSingleNumXOR(nums)); // 4
     }
     //brute solution  TC = O(n) and SC = O(n)
     public static Integer findSingleNum(int[] nums){
@@ -31,5 +32,21 @@ public class SingleNumber {
         }
         return singleNumSet.iterator().next();
     }
+    
+    /**
+     * ***** This only works for an even number of duplicates (not odd) *****
+     */
+    //XOR Solution  TC = O(n) and SC = O(1) using one variable result
+    public static Integer findSingleNumXOR(int[] nums) {
+        if (nums.length == 1) {
+            return nums[0];
+        }
+        int single = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            single = single ^ nums[i];
+        }
+        return single;
+    }
+    // 1 ^ 2 ^ 4 ^ 2 ^ 1 == 4
 
 }

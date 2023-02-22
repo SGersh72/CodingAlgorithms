@@ -11,8 +11,10 @@ public class SingleNumber {
 
     public static void main(String[] args) {
 
+        int[] nums = {1, 2, 4, 2, 1};
+        System.out.println(findSingleNum(nums));  // 4
     }
-    //brute solution
+    //brute solution  TC = O(n) and SC = O(n)
     public static Integer findSingleNum(int[] nums){
         if (nums.length == 1) {
             return nums[0];

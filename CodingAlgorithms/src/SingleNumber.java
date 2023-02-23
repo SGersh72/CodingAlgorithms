@@ -32,7 +32,7 @@ public class SingleNumber {
         }
         return singleNumSet.iterator().next();
     }
-    
+
     /**
      * ***** This only works for an even number of duplicates (not odd) *****
      */

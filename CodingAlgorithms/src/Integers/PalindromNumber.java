@@ -1,6 +1,7 @@
 package Integers;
 
 /**
+ * LeetCode 9
  * A Palindrome is read equally forwards and backwards (121, 1221, or סוס)
  * Return true if the number is a palindrome and false if it isn't.
  *
@@ -13,7 +14,7 @@ package Integers;
 public class PalindromNumber {
 
     public static void main(String[] args) {
-        
+
 //        int[] nums1 = {1, 2, 1};
 //        int[] nums2 = {1, 2, 2, 1};
 //        int[] nums3 = {1, 2, 3};
@@ -45,7 +46,7 @@ public class PalindromNumber {
         int toCompare = n;
         int reversed = 0;
         int lastDigit;
-        while(n > 0) {
+        while(n > 0) { // risk of overflow
             lastDigit = n % 10;
             reversed = (reversed * 10) + lastDigit;
             n = n / 10;
@@ -65,7 +66,7 @@ public class PalindromNumber {
         }
         int reversed = 0;
         int num = n;
-        while (num > reversed) {
+        while (num > reversed) {  // no risk of overflow
             int lastDigit = num % 10;
             reversed = reversed * 10 + lastDigit;
             num = num/10;

@@ -27,9 +27,9 @@ public class NthRoot {
 
     public static void main(String[] args) {
 
-        System.out.println(nthRoot(27.0, 3)); // 26.99920654296875
-        System.out.println(nthRoot(7.0, 3)); // 6.999267578125
-        System.out.println(nthRoot(1000.0, 3)); // 999.9990472793579
+        System.out.println(nthRoot(27.0, 3)); // 2.99951171875
+        System.out.println(nthRoot(7.0, 3)); // 1.91259765625
+        System.out.println(nthRoot(1000.0, 3)); // 9.999399185180664
         System.out.println(nthRoot(0.0, 3));  // 1.0
         System.out.println(nthRoot(1.0, 3)); // 1.0
 
@@ -54,7 +54,7 @@ public class NthRoot {
     }
 
     private static double multiply(double mid, int n) {
-        double result = 0;
+        double result = 1.0;
         for (int i = 1; i <= n; i++) {
             result = result * mid;
         }

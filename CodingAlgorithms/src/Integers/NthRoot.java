@@ -30,7 +30,7 @@ public class NthRoot {
         System.out.println(nthRoot(27.0, 3)); // 2.99951171875
         System.out.println(nthRoot(7.0, 3)); // 1.91259765625
         System.out.println(nthRoot(1000.0, 3)); // 9.999399185180664
-        System.out.println(nthRoot(0.0, 3));  // 1.0
+        System.out.println(nthRoot(0.0, 3));  // 0.0
         System.out.println(nthRoot(1.0, 3)); // 1.0
 
 
@@ -40,6 +40,8 @@ public class NthRoot {
         double right = x;
         double left = 1.0;
         double error = 0.001;
+
+        if (x == 0) return 0;
 
         while ((right - left) > error) {
             double mid = (right + left) / 2.0;

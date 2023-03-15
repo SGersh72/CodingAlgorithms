@@ -11,6 +11,9 @@ public class LongestCommonPrefix {
      * 2) examine whether arr[1] (flow) is equal to prefix (flower). If not, omit the last char (flowe) from
      * the prefix and repeat the test-> (flow, omitted 'e','r') ->
      * 3) repeat the test for the other elements in the array, with the shortened prefix (flight) -> "fl"
+     *
+     * TC: O(m*n) m= length of the array, n= the longest string in the array
+     * SC: O(1) creating just one variable - prefix
      */
 
     public static void main(String[] args) {
@@ -18,6 +21,7 @@ public class LongestCommonPrefix {
         String[] srtingArray1 = {"axonk", "axonk", "axnl"};
         String[] srtingArray2 = {"axo", "bonk", "anl"};
 
+        System.out.println(longestCommonPrefix(srtingArray1)); //ax
         System.out.println(longestCommonPrefix(srtingArray2));
 
     }
@@ -33,6 +37,6 @@ public class LongestCommonPrefix {
                 }
 
                 }
-            return  "\"" + prefix + "\"";
+            return  prefix;
             }
 }
